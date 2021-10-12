@@ -22,17 +22,84 @@ public class PrimitivesInformationAppl {
 		//for default there should be out: Wrong primitive type
 		// for each type there should be an appropriate method of printing information of the type
 		//for example, printCharInformation - method printing out the info about type "char"
+		switch(type) {
+			case "long":
+				printLongInformation();
+				break;
+			case "int":
+				printIntInformation();
+				break;
+			case "short":
+				printShortInformation();
+				break;
+			case "char":
+				printCharInformation();
+				break;
+			case "byte":
+				printByteInformation();
+				break;
+			default:
+				System.out.printf("Unknown type %s\n",type);
+				break;
+		}
+	}
+	
+	private static void printByteInformation() {
+		byte minValue = 1; 
+		int nBits = 1;
+		while(minValue > 0) {
+			minValue = (byte) (minValue * 2);//compiler casts minValue to int, multiplies on 2 
+			nBits = nBits + 1;
+		}
+		byte maxValue = (byte) (minValue - 1);
+		System.out.printf("char. minimal value is %d, maximal value is %d, number of bytes is %d\n", (byte)minValue, (byte)maxValue, nBits / 8);		
+	}
+
+	private static void printShortInformation() {
+		short minValue = 1; 
+		int nBits = 1;
+		while(minValue > 0) {
+			minValue = (short) (minValue * 2);//compiler casts minValue to int, multiplies on 2 
+			nBits = nBits + 1;
+		}
+		short maxValue = (short) (minValue - 1);
+		System.out.printf("short. minimal value is %d, maximal value is %d, number of bytes is %d\n", (short)minValue, (short)maxValue, nBits / 8);		
+		
+	}
+
+	private static void printIntInformation() {
+		int minValue = 1; 
+		int nBits = 1;
+		while(minValue > 0) {
+			minValue = (minValue * 2);//compiler casts minValue to int, multiplies on 2 
+			nBits = nBits + 1;
+		}
+		int maxValue = (minValue - 1);
+		System.out.printf("int. minimal value is %d, maximal value is %d, number of bytes is %d\n", minValue, maxValue, nBits / 8);		
+		
+	}
+
+	private static void printLongInformation() {
+		long minValue = 1; 
+		int nBits = 1;
+		while(minValue > 0) {
+			minValue = (minValue * 2);//compiler casts minValue to int, multiplies on 2 
+			nBits = nBits + 1;
+		}
+		long maxValue = (minValue - 1);
+		System.out.printf("long. minimal value is %d, maximal value is %d, number of bytes is %d\n", minValue, maxValue, nBits / 8);		
+		
+	}
+
+	private static void printCharInformation() {
 		char minValue = 1; 
-		char maxValue = 1;
 		int nBits = 1;
 		while(minValue > 0) {
 			minValue = (char) (minValue * 2);//compiler casts minValue to int, multiplies on 2 
 			nBits = nBits + 1;
 		}
-		maxValue = (char) (minValue - 1);
-		System.out.printf("minimal value is %d, maximal value is %d, number of bytes is %d\n", (int)minValue, (int)maxValue, nBits / 8);
-		
+		char maxValue = (char) (minValue - 1);
+		System.out.printf("char. minimal value is %d, maximal value is %d, number of bytes is %d\n", (int)minValue, (int)maxValue, nBits / 8);		
 		
 	}
-
 }
