@@ -52,7 +52,7 @@ public class PrimitivesInformationAppl {
 			nBits = nBits + 1;
 		}
 		byte maxValue = (byte) (minValue - 1);
-		System.out.printf("char. minimal value is %d, maximal value is %d, number of bytes is %d\n", (byte)minValue, (byte)maxValue, nBits / 8);		
+		System.out.printf("char. minimal value is %d, maximal value is %d, number of bytes is %d\n", minValue, maxValue, nBits / 8);		
 	}
 
 	private static void printShortInformation() {
@@ -63,7 +63,7 @@ public class PrimitivesInformationAppl {
 			nBits = nBits + 1;
 		}
 		short maxValue = (short) (minValue - 1);
-		System.out.printf("short. minimal value is %d, maximal value is %d, number of bytes is %d\n", (short)minValue, (short)maxValue, nBits / 8);		
+		System.out.printf("short. minimal value is %d, maximal value is %d, number of bytes is %d\n", minValue, maxValue, nBits / 8);		
 		
 	}
 
